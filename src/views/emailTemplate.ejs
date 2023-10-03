@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Verification Email</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f2f2f2;
+        color: #333;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #ccc;
+      }
+      .heading {
+        margin-top: 0;
+        color: #007bff;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+      span {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">OTP Verification Email</h1>
+      <p>Hey, <span><%= username %></span></p>
+      <p>Your OTP Verification Email is :</p>
+      <h1><%= otp %></h1>
+      <p>It will be expire in <span><%= otpExpireIn %></span></p>
+      <br />
+      <p>Thank you for using our service!</p>
+    </div>
+  </body>
+</html>
