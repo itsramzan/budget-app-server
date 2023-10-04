@@ -43,7 +43,7 @@ app.set("view engine", "ejs");
 app.get("/", async (req, res, next) => {
   try {
     res
-      .status(2000)
+      .status(200)
       .json({ status: "success", message: "Welcome to budget api server" });
   } catch (err) {
     next(err);
