@@ -39,6 +39,17 @@ app.use(limiter(1, 100));
 // Set view engine
 app.set("view engine", "ejs");
 
+// Landing route
+app.get("/", async (req, res, next) => {
+  try {
+    res
+      .status(2000)
+      .json({ status: "success", message: "Welcome to budget api server" });
+  } catch (err) {
+    next(err);
+  }
+});
+
 // Use essential routes
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
